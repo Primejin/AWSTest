@@ -5,3 +5,22 @@ server:
     encoding:
       charset: utf-8
       enabled: true
+      
+spring:
+#  mvc:
+#    view:
+#      prefix: /WEB-INF/views/
+#      suffix: .jsp
+      
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://test-database.cslu4ae7hbzp.ap-northeast-2.rds.amazonaws.com:3306/testdb?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: cos
+    password: cos12345
+    
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    open-in-view: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
