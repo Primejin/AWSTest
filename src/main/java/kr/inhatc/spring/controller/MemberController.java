@@ -19,21 +19,21 @@ public class MemberController {
         return "index";
     }
 
-    @GetMapping("/member/signup")
+    @GetMapping("/signup")
     public String signupForm(Model model) {
         model.addAttribute("member",new MemberDto());
 
         return "signupForm";
     }
 
-    @PostMapping("/member/signup")
+    @PostMapping("/signup")
     public String signup(MemberDto memberDto) {
         memberService.signUp(memberDto);
 
         return "redirect:";
     }
 
-    @GetMapping("/member/login")
+    @GetMapping("/login")
     public String login() {
         return "loginForm";
     }
